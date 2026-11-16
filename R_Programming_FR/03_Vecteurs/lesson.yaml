@@ -1,0 +1,59 @@
+- Class: meta
+  Course: Programmation R en français
+  Lesson: Vecteurs
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Un vecteur est une structure simple qui contient plusieurs valeurs du même type.
+
+- Class: cmd_question
+  Output: Créez le vecteur ages contenant 18, 25 et 40.
+  CorrectAnswer: ages <- c(18, 25, 40)
+  AnswerTests: omnitest(correctExpr='ages <- c(18, 25, 40)')
+  Hint: Utilisez ages <- c(18, 25, 40).
+
+- Class: cmd_question
+  Output: Affichez le troisième élément de ages.
+  CorrectAnswer: ages[3]
+  AnswerTests: omnitest(correctExpr='ages[3]')
+  Hint: Utilisez des crochets pour sélectionner un élément.
+
+- Class: cmd_question
+  Output: Affichez les deux premiers éléments de ages.
+  CorrectAnswer: ages[1:2]
+  AnswerTests: omnitest(correctExpr='ages[1:2]')
+  Hint: Utilisez ages[1:2].
+
+- Class: cmd_question
+  Output: Calculez la moyenne des âges avec mean(ages).
+  CorrectAnswer: mean(ages)
+  AnswerTests: omnitest(correctExpr='mean(ages)')
+  Hint: Tapez mean(ages).
+
+- Class: cmd_question
+  Output: Ajoutez 5 à chaque valeur de ages.
+  CorrectAnswer: ages + 5
+  AnswerTests: omnitest(correctExpr='ages + 5')
+  Hint: R applique l'opération à chaque élément du vecteur.
+
+- Class: cmd_question
+  Output: Créez le vecteur statut contenant Confirmé, Probable et Confirmé.
+  CorrectAnswer: statut <- c("Confirmé", "Probable", "Confirmé")
+  AnswerTests: any_of_exprs('statut <- c("Confirmé", "Probable", "Confirmé")', "statut <- c('Confirmé', 'Probable', 'Confirmé')")
+  Hint: Utilisez c() avec trois chaînes de caractères.
+
+- Class: cmd_question
+  Output: Sélectionnez les valeurs de statut égales à Confirmé.
+  CorrectAnswer: statut[statut == "Confirmé"]
+  AnswerTests: any_of_exprs('statut[statut == "Confirmé"]', "statut[statut == 'Confirmé']")
+  Hint: Utilisez un vecteur logique dans les crochets.
+
+- Class: mult_question
+  Output: Quelle est la première position d'un vecteur R ?
+  CorrectAnswer: 1
+  AnswerChoices: 1;0;-1
+  AnswerTests: omnitest(correctVal='1')
+  Hint: R commence l'indexation à 1.

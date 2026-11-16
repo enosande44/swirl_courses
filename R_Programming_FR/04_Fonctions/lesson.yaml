@@ -1,0 +1,49 @@
+- Class: meta
+  Course: Programmation R en français
+  Lesson: Fonctions
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Les fonctions sont des blocs de code réutilisables. Elles reçoivent des arguments et renvoient souvent une valeur.
+
+- Class: cmd_question
+  Output: Affichez la date du jour avec Sys.Date().
+  CorrectAnswer: Sys.Date()
+  AnswerTests: omnitest(correctExpr='Sys.Date()')
+  Hint: Tapez Sys.Date().
+
+- Class: cmd_question
+  Output: Créez une fonction appelée carre qui renvoie x multiplié par lui-même.
+  CorrectAnswer: carre <- function(x) { x * x }
+  AnswerTests: expr_uses_func('function')
+  Hint: Utilisez carre <- function(x) { x * x }.
+
+- Class: cmd_question
+  Output: Testez votre fonction carre avec la valeur 6.
+  CorrectAnswer: carre(6)
+  AnswerTests: omnitest(correctExpr='carre(6)')
+  Hint: Tapez carre(6).
+
+- Class: text
+  Output: Les arguments peuvent avoir des valeurs par défaut. Cela évite de répéter la même valeur dans les appels courants.
+
+- Class: cmd_question
+  Output: Créez une fonction reste qui accepte num et diviseur, avec diviseur égal à 2 par défaut.
+  CorrectAnswer: reste <- function(num, diviseur = 2) { num %% diviseur }
+  AnswerTests: expr_uses_func('function')
+  Hint: Utilisez l'opérateur %% pour le reste de la division.
+
+- Class: cmd_question
+  Output: Testez reste avec 11 et 5.
+  CorrectAnswer: reste(11, 5)
+  AnswerTests: omnitest(correctExpr='reste(11, 5)')
+  Hint: Tapez reste(11, 5).
+
+- Class: cmd_question
+  Output: Affichez les arguments de la fonction mean avec args(mean).
+  CorrectAnswer: args(mean)
+  AnswerTests: omnitest(correctExpr='args(mean)')
+  Hint: Tapez args(mean).

@@ -9,6 +9,7 @@ Here are our current offerings, organized by level of difficulty:
 #### Beginner
 
 - **R Programming**: The basics of programming in R
+- **Programmation R en français**: A compact French-language beginner course covering R basics, objects and files, vectors, functions, and data inspection. Install it from the local course folder or from this repository with `swirl::install_course_github()` after publishing the `R_Programming_FR` directory.
 - [**R Programming E**](https://github.com/swirldev/R_Programming_E): Same as the original, but modified slightly for in-class use (see below ***)
 - [**The R Programming Environment**](https://swirlstats.com/scn/rpe.html)
 <!-- - **Data Analysis**: Basic ideas in statistics and data visualization -->
@@ -84,3 +85,17 @@ Instructors around the world are using swirl in their classrooms. We think this 
 
 If you are not sure about a particular use case, don't hesitate to post a
 question to our [Google Group](https://groups.google.com/forum/#!forum/swirl-discuss).
+
+## French course maintained in this fork
+
+The `R_Programming_FR` directory contains a French-language starter course. It is intentionally separate from the original `R_Programming` course so that the English lessons remain unchanged.
+
+To test it locally:
+
+```
+library(swirl)
+install_course_directory("path/to/swirl_courses/R_Programming_FR")
+swirl()
+```
+
+Select **Programmation R en français** and begin with **Bases de R**. The course keeps R commands, object names, and validation expressions in code form while translating the teaching text, prompts, hints, and answer choices.

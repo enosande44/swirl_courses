@@ -1,0 +1,65 @@
+- Class: meta
+  Course: Programmation R en français
+  Lesson: Bases de R
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Bienvenue ! Cette leçon présente les commandes, les objets, les fonctions et l'opérateur d'affectation de R.
+
+- Class: cmd_question
+  Output: R peut servir de calculatrice interactive. Calculez 5 + 7.
+  CorrectAnswer: 5 + 7
+  AnswerTests: omnitest(correctExpr='5 + 7')
+  Hint: Tapez 5 + 7 puis appuyez sur Entrée.
+
+- Class: text
+  Output: R affiche le résultat de la commande. Pour conserver un résultat, nous pouvons l'affecter à un objet.
+
+- Class: cmd_question
+  Output: Créez un objet appelé x contenant le résultat de 5 + 7.
+  CorrectAnswer: x <- 5 + 7
+  AnswerTests: any_of_exprs('x <- 5 + 7', 'x <- 7 + 5')
+  Hint: Utilisez x <- 5 + 7, avec un espace de chaque côté de <-.
+
+- Class: cmd_question
+  Output: Affichez le contenu de l'objet x.
+  CorrectAnswer: x
+  AnswerTests: omnitest(correctExpr='x')
+  Hint: Tapez x puis appuyez sur Entrée.
+
+- Class: cmd_question
+  Output: Créez un objet y égal à x - 3.
+  CorrectAnswer: y <- x - 3
+  AnswerTests: omnitest(correctExpr='y <- x - 3')
+  Hint: Tapez y <- x - 3.
+
+- Class: cmd_question
+  Output: Quelle est la valeur de y ? Affichez-la.
+  CorrectAnswer: y
+  AnswerTests: omnitest(correctExpr='y')
+  Hint: Tapez y.
+
+- Class: text
+  Output: Les fonctions réalisent des tâches. Elles prennent parfois des arguments entre parenthèses et produisent souvent un résultat.
+
+- Class: cmd_question
+  Output: Calculez la moyenne des valeurs 2, 4 et 5 avec mean().
+  CorrectAnswer: mean(c(2, 4, 5))
+  AnswerTests: omnitest(correctExpr='mean(c(2, 4, 5))')
+  Hint: Utilisez mean(c(2, 4, 5)).
+
+- Class: cmd_question
+  Output: Consultez l'aide de la fonction mean().
+  CorrectAnswer: ?mean
+  AnswerTests: omnitest(correctExpr='?mean')
+  Hint: Tapez ?mean, sans parenthèses.
+
+- Class: mult_question
+  Output: Quel énoncé décrit le mieux l'opérateur <- ?
+  CorrectAnswer: Il affecte une valeur à un objet
+  AnswerChoices: Il affecte une valeur à un objet;Il compare deux valeurs;Il supprime un objet
+  AnswerTests: omnitest(correctVal='Il affecte une valeur à un objet')
+  Hint: Pensez à une flèche qui place la valeur de droite dans l'objet de gauche.

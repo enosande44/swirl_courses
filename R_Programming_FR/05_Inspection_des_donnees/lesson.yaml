@@ -1,0 +1,53 @@
+- Class: meta
+  Course: Programmation R en français
+  Lesson: Inspection des données
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Avant une analyse, inspectez la taille, les noms de colonnes, les classes et les premières lignes du jeu de données.
+
+- Class: cmd_question
+  Output: Créez un data frame appelé donnees avec id égal à 1, 2, 3 et cas égal à 4, 6, 5.
+  CorrectAnswer: donnees <- data.frame(id = 1:3, cas = c(4, 6, 5))
+  AnswerTests: omnitest(correctExpr='donnees <- data.frame(id = 1:3, cas = c(4, 6, 5))')
+  Hint: Utilisez data.frame(id = 1:3, cas = c(4, 6, 5)).
+
+- Class: cmd_question
+  Output: Affichez les dimensions de donnees.
+  CorrectAnswer: dim(donnees)
+  AnswerTests: omnitest(correctExpr='dim(donnees)')
+  Hint: Utilisez dim(donnees).
+
+- Class: cmd_question
+  Output: Affichez les noms des colonnes de donnees.
+  CorrectAnswer: names(donnees)
+  AnswerTests: omnitest(correctExpr='names(donnees)')
+  Hint: Utilisez names(donnees).
+
+- Class: cmd_question
+  Output: Affichez la structure de donnees.
+  CorrectAnswer: str(donnees)
+  AnswerTests: omnitest(correctExpr='str(donnees)')
+  Hint: Utilisez str(donnees).
+
+- Class: cmd_question
+  Output: Affichez les premières lignes de donnees.
+  CorrectAnswer: head(donnees)
+  AnswerTests: omnitest(correctExpr='head(donnees)')
+  Hint: Utilisez head(donnees).
+
+- Class: cmd_question
+  Output: Calculez le total des cas avec sum(donnees$cas).
+  CorrectAnswer: sum(donnees$cas)
+  AnswerTests: omnitest(correctExpr='sum(donnees$cas)')
+  Hint: Utilisez sum(donnees$cas).
+
+- Class: mult_question
+  Output: Quelle fonction donne rapidement un résumé des colonnes ?
+  CorrectAnswer: summary()
+  AnswerChoices: summary();head();names()
+  AnswerTests: omnitest(correctVal='summary()')
+  Hint: Utilisez summary() pour un aperçu statistique.

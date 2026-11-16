@@ -1,0 +1,53 @@
+- Class: meta
+  Course: Programmation R en français
+  Lesson: Objets et fichiers
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Dans cette leçon, vous allez reconnaître les objets R et organiser les fichiers d'un projet.
+
+- Class: cmd_question
+  Output: Affichez le répertoire de travail actuel avec getwd().
+  CorrectAnswer: getwd()
+  AnswerTests: omnitest(correctExpr='getwd()')
+  Hint: Tapez getwd().
+
+- Class: cmd_question
+  Output: Listez les fichiers du répertoire de travail avec list.files().
+  CorrectAnswer: list.files()
+  AnswerTests: omnitest(correctExpr='list.files()')
+  Hint: Tapez list.files().
+
+- Class: text
+  Output: Un projet RStudio fournit un répertoire de travail prévisible. Les chemins relatifs rendent le code plus facile à partager.
+
+- Class: cmd_question
+  Output: Créez un vecteur de noms de zones appelé zones contenant Nord, Centre et Sud.
+  CorrectAnswer: zones <- c("Nord", "Centre", "Sud")
+  AnswerTests: any_of_exprs('zones <- c("Nord", "Centre", "Sud")', "zones <- c('Nord', 'Centre', 'Sud')")
+  Hint: Utilisez c() et affectez le résultat à zones.
+
+- Class: cmd_question
+  Output: Affichez les objets actuellement disponibles avec ls().
+  CorrectAnswer: ls()
+  AnswerTests: omnitest(correctExpr='ls()')
+  Hint: Tapez ls().
+
+- Class: cmd_question
+  Output: Supprimez uniquement l'objet zones avec rm(zones).
+  CorrectAnswer: rm(zones)
+  AnswerTests: omnitest(correctExpr='rm(zones)')
+  Hint: Utilisez rm(zones).
+
+- Class: text
+  Output: En pratique, gardez les données, les scripts et les résultats dans des dossiers distincts. Évitez les chemins absolus propres à un seul ordinateur.
+
+- Class: mult_question
+  Output: Où est-il préférable d'enregistrer les commandes que vous souhaitez réutiliser ?
+  CorrectAnswer: Dans un script R
+  AnswerChoices: Dans un script R;Uniquement dans la console;Dans le nom du fichier de données
+  AnswerTests: omnitest(correctVal='Dans un script R')
+  Hint: Un script peut être enregistré, relu et exécuté à nouveau.
