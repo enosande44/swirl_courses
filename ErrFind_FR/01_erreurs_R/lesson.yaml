@@ -1,0 +1,32 @@
+- Class: meta
+  Course: Résoudre les erreurs R en français
+  Lesson: Lire et résoudre les erreurs
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Une erreur est une information. Lisez-la, réduisez l'exemple et vérifiez les objets et les noms de colonnes.
+
+- Class: cmd_question
+  Output: Créez x égal à 1, 2, 3.
+  CorrectAnswer: x <- c(1, 2, 3)
+  AnswerTests: omnitest(correctExpr='x <- c(1, 2, 3)')
+  Hint: Utilisez c().
+
+- Class: cmd_question
+  Output: Demandez la longueur de x avec length().
+  CorrectAnswer: length(x)
+  AnswerTests: omnitest(correctExpr='length(x)')
+  Hint: Utilisez length(x).
+
+- Class: text
+  Output: Pour obtenir de l'aide, utilisez ?fonction, la documentation, le Handbook ou un exemple minimal reproductible. Ne partagez jamais de données personnelles.
+
+- Class: mult_question
+  Output: Quelle est une bonne première étape devant une erreur ?
+  CorrectAnswer: Lire le message et reproduire un petit exemple
+  AnswerChoices: Lire le message et reproduire un petit exemple;Réexécuter tout le projet sans lire l'erreur;Supprimer les données
+  AnswerTests: omnitest(correctVal='Lire le message et reproduire un petit exemple')
+  Hint: Commencez par le message d'erreur et l'objet concerné.

@@ -1,0 +1,25 @@
+- Class: meta
+  Course: Analyse exploratoire en français
+  Lesson: Réduction dimensionnelle
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: La PCA résume plusieurs variables numériques en quelques axes qui expliquent une partie de la variation.
+
+- Class: cmd_question
+  Output: Créez mat avec les colonnes c(1,2,3), c(2,4,6) et c(3,1,2).
+  CorrectAnswer: mat <- cbind(c(1, 2, 3), c(2, 4, 6), c(3, 1, 2))
+  AnswerTests: omnitest(correctExpr='mat <- cbind(c(1, 2, 3), c(2, 4, 6), c(3, 1, 2))')
+  Hint: Utilisez cbind().
+
+- Class: cmd_question
+  Output: Calculez une PCA avec prcomp() en centrant les variables.
+  CorrectAnswer: prcomp(mat, center = TRUE, scale. = TRUE)
+  AnswerTests: expr_uses_func('prcomp')
+  Hint: Utilisez prcomp(mat, center = TRUE, scale. = TRUE).
+
+- Class: text
+  Output: Interprétez les axes avec prudence et conservez les unités et la signification des variables originales.

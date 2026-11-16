@@ -1,0 +1,25 @@
+- Class: meta
+  Course: Inférence statistique en français
+  Lesson: Introduction
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: L'inférence utilise un échantillon pour apprendre quelque chose sur une population, avec une incertitude explicite.
+
+- Class: cmd_question
+  Output: Créez x contenant 2, 4, 6, 8 et 10.
+  CorrectAnswer: x <- c(2, 4, 6, 8, 10)
+  AnswerTests: omnitest(correctExpr='x <- c(2, 4, 6, 8, 10)')
+  Hint: Utilisez c().
+
+- Class: cmd_question
+  Output: Calculez la moyenne observée.
+  CorrectAnswer: mean(x)
+  AnswerTests: omnitest(correctExpr='mean(x)')
+  Hint: Utilisez mean(x).
+
+- Class: text
+  Output: Distinguez l'estimation, la variabilité de l'échantillon et la question scientifique.

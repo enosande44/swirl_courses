@@ -1,0 +1,40 @@
+- Class: meta
+  Course: Nettoyer et analyser les données en R
+  Lesson: dplyr : transformer les données
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Cette leçon présente select(), filter(), mutate(), arrange() et summarize().
+
+- Class: cmd_question
+  Output: Créez df avec id égal à 1:4, zone égal à A, A, B, B et cas égal à 2, 5, 1, 4.
+  CorrectAnswer: df <- data.frame(id = 1:4, zone = c("A", "A", "B", "B"), cas = c(2, 5, 1, 4))
+  AnswerTests: omnitest(correctExpr='df <- data.frame(id = 1:4, zone = c("A", "A", "B", "B"), cas = c(2, 5, 1, 4))')
+  Hint: Utilisez data.frame() avec les trois colonnes.
+
+- Class: cmd_question
+  Output: Gardez uniquement les colonnes zone et cas avec select().
+  CorrectAnswer: dplyr::select(df, zone, cas)
+  AnswerTests: expr_uses_func('select')
+  Hint: Utilisez select(df, zone, cas).
+
+- Class: cmd_question
+  Output: Gardez les lignes où cas est supérieur ou égal à 4.
+  CorrectAnswer: dplyr::filter(df, cas >= 4)
+  AnswerTests: expr_uses_func('filter')
+  Hint: Utilisez filter(df, cas >= 4).
+
+- Class: cmd_question
+  Output: Ajoutez une colonne cas_double égale à cas * 2.
+  CorrectAnswer: dplyr::mutate(df, cas_double = cas * 2)
+  AnswerTests: expr_uses_func('mutate')
+  Hint: Utilisez mutate(df, cas_double = cas * 2).
+
+- Class: cmd_question
+  Output: Calculez le total de cas par zone avec group_by() et summarize().
+  CorrectAnswer: dplyr::summarize(dplyr::group_by(df, zone), total = sum(cas))
+  AnswerTests: expr_uses_func('summarize')
+  Hint: Utilisez group_by(df, zone) puis summarize(total = sum(cas)).

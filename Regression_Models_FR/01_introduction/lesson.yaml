@@ -1,0 +1,25 @@
+- Class: meta
+  Course: Modèles de régression en français
+  Lesson: Introduction à la régression
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: La régression décrit une variable réponse en fonction d'une ou plusieurs variables explicatives.
+
+- Class: cmd_question
+  Output: Créez df avec x égal à 1:5 et y égal à 2, 4, 5, 8, 10.
+  CorrectAnswer: df <- data.frame(x = 1:5, y = c(2, 4, 5, 8, 10))
+  AnswerTests: omnitest(correctExpr='df <- data.frame(x = 1:5, y = c(2, 4, 5, 8, 10))')
+  Hint: Utilisez data.frame().
+
+- Class: cmd_question
+  Output: Ajustez un modèle linéaire de y sur x.
+  CorrectAnswer: lm(y ~ x, data = df)
+  AnswerTests: expr_uses_func('lm')
+  Hint: Utilisez lm(y ~ x, data = df).
+
+- Class: text
+  Output: Le modèle, les résidus et les hypothèses doivent être examinés ensemble.

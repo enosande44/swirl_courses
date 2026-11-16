@@ -10,6 +10,13 @@ Here are our current offerings, organized by level of difficulty:
 
 - **R Programming**: The basics of programming in R
 - **Programmation R en français**: A compact French-language beginner course covering R basics, objects and files, vectors, functions, and data inspection. Install it from the local course folder or from this repository with `swirl::install_course_github()` after publishing the `R_Programming_FR` directory.
+- **Nettoyer et analyser les données en français**: French lessons for dplyr, pipes, tidyr, and lubridate.
+- **Analyse des données en français**: French lessons for central tendency, dispersion, and descriptive visualization.
+- **Analyse exploratoire en français**: French lessons for graphics, ggplot2, clustering, and dimension reduction.
+- **Biostatistique mathématique en français**: French lessons for t-tests, power, and sample size.
+- **Modèles de régression en français**: French lessons for linear and multivariable regression.
+- **Inférence statistique en français**: French lessons for probability, confidence intervals, and hypothesis tests.
+- **Résoudre les erreurs R en français**: French troubleshooting practice.
 - [**R Programming E**](https://github.com/swirldev/R_Programming_E): Same as the original, but modified slightly for in-class use (see below ***)
 - [**The R Programming Environment**](https://swirlstats.com/scn/rpe.html)
 <!-- - **Data Analysis**: Basic ideas in statistics and data visualization -->

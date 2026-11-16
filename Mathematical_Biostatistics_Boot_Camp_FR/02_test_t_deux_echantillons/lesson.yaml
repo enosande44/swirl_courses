@@ -1,0 +1,25 @@
+- Class: meta
+  Course: Biostatistique mathématique en français
+  Lesson: Test t à deux échantillons
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Le test t à deux échantillons compare deux moyennes indépendantes.
+
+- Class: cmd_question
+  Output: Créez a contenant 8, 9, 10 et b contenant 11, 12, 13.
+  CorrectAnswer: a <- c(8, 9, 10); b <- c(11, 12, 13)
+  AnswerTests: any_of_exprs('a <- c(8, 9, 10); b <- c(11, 12, 13)', 'a <- c(8, 9, 10)\nb <- c(11, 12, 13)')
+  Hint: Créez les deux vecteurs.
+
+- Class: cmd_question
+  Output: Comparez les deux groupes avec t.test(a, b).
+  CorrectAnswer: t.test(a, b)
+  AnswerTests: expr_uses_func('t.test')
+  Hint: Utilisez t.test(a, b).
+
+- Class: text
+  Output: Vérifiez l'indépendance, les unités et la pertinence de la différence avant d'interpréter le résultat.

@@ -1,0 +1,25 @@
+- Class: meta
+  Course: Analyse exploratoire en français
+  Lesson: Clustering
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Le clustering regroupe des observations qui se ressemblent selon des variables choisies.
+
+- Class: cmd_question
+  Output: Créez mat avec les lignes c(1, 1), c(2, 2), c(9, 9), c(10, 10).
+  CorrectAnswer: mat <- rbind(c(1, 1), c(2, 2), c(9, 9), c(10, 10))
+  AnswerTests: omnitest(correctExpr='mat <- rbind(c(1, 1), c(2, 2), c(9, 9), c(10, 10))')
+  Hint: Utilisez rbind().
+
+- Class: cmd_question
+  Output: Appliquez kmeans() avec deux groupes.
+  CorrectAnswer: kmeans(mat, centers = 2)
+  AnswerTests: expr_uses_func('kmeans')
+  Hint: Utilisez kmeans(mat, centers = 2).
+
+- Class: text
+  Output: Les groupes dépendent des variables, de l'échelle et du nombre de centres choisi. Ils ne sont pas automatiquement des catégories réelles.

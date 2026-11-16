@@ -1,0 +1,25 @@
+- Class: meta
+  Course: Modèles de régression en français
+  Lesson: Régression multivariable
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Une régression multivariable estime l'association d'une variable avec plusieurs prédicteurs simultanément.
+
+- Class: cmd_question
+  Output: Créez df avec y égal à 2, 4, 5, 8, 10, x1 égal à 1:5 et x2 égal à 5:1.
+  CorrectAnswer: df <- data.frame(y = c(2, 4, 5, 8, 10), x1 = 1:5, x2 = 5:1)
+  AnswerTests: omnitest(correctExpr='df <- data.frame(y = c(2, 4, 5, 8, 10), x1 = 1:5, x2 = 5:1)')
+  Hint: Utilisez data.frame().
+
+- Class: cmd_question
+  Output: Ajustez y sur x1 et x2.
+  CorrectAnswer: lm(y ~ x1 + x2, data = df)
+  AnswerTests: expr_uses_func('lm')
+  Hint: Utilisez lm(y ~ x1 + x2, data = df).
+
+- Class: text
+  Output: Vérifiez la colinéarité, la forme du modèle, les résidus et l'interprétation conditionnelle des coefficients.

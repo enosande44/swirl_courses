@@ -1,0 +1,32 @@
+- Class: meta
+  Course: Nettoyer et analyser les données en R
+  Lesson: Mettre les données en forme avec tidyr
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Les données tidy utilisent une ligne par observation, une colonne par variable et une valeur par cellule.
+
+- Class: cmd_question
+  Output: Créez wide avec pays égal à A et B, janvier égal à 10 et 20, février égal à 12 et 25.
+  CorrectAnswer: wide <- data.frame(pays = c("A", "B"), janvier = c(10, 20), fevrier = c(12, 25))
+  AnswerTests: omnitest(correctExpr='wide <- data.frame(pays = c("A", "B"), janvier = c(10, 20), fevrier = c(12, 25))')
+  Hint: Utilisez data.frame() et le nom de colonne fevrier.
+
+- Class: cmd_question
+  Output: Transformez wide en format long avec pivot_longer(), en nommant les colonnes mois et cas.
+  CorrectAnswer: tidyr::pivot_longer(wide, cols = c(janvier, fevrier), names_to = "mois", values_to = "cas")
+  AnswerTests: expr_uses_func('pivot_longer')
+  Hint: Utilisez cols, names_to et values_to.
+
+- Class: text
+  Output: Le format long facilite les regroupements, les graphiques et les comparaisons dans le temps.
+
+- Class: mult_question
+  Output: Dans une table tidy, que représente généralement une ligne ?
+  CorrectAnswer: Une observation
+  AnswerChoices: Une observation;Plusieurs variables cachées;Un titre de graphique
+  AnswerTests: omnitest(correctVal='Une observation')
+  Hint: Chaque ligne correspond à une unité d'analyse.

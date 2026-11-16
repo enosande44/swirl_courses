@@ -1,0 +1,22 @@
+- Class: meta
+  Course: Inférence statistique en français
+  Lesson: Probabilité
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Une probabilité décrit la fréquence ou la plausibilité d'un événement selon un modèle ou un mécanisme donné.
+
+- Class: cmd_question
+  Output: Simulez 10 tirages d'une pièce équilibrée avec rbinom().
+  CorrectAnswer: rbinom(10, size = 1, prob = 0.5)
+  AnswerTests: expr_uses_func('rbinom')
+  Hint: Utilisez rbinom(10, 1, 0.5).
+
+- Class: cmd_question
+  Output: Calculez la probabilité d'obtenir au moins un succès sur 10 tirages avec pbinom().
+  CorrectAnswer: 1 - pbinom(0, size = 10, prob = 0.5)
+  AnswerTests: expr_uses_func('pbinom')
+  Hint: Utilisez 1 - pbinom(0, 10, 0.5).

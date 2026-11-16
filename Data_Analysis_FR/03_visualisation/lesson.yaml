@@ -1,0 +1,31 @@
+- Class: meta
+  Course: Analyse des données en français
+  Lesson: Visualisation descriptive
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Un graphique doit répondre à une question et rendre une tendance visible.
+
+- Class: cmd_question
+  Output: Créez x contenant 2, 4, 4, 8 et 12.
+  CorrectAnswer: x <- c(2, 4, 4, 8, 12)
+  AnswerTests: omnitest(correctExpr='x <- c(2, 4, 4, 8, 12)')
+  Hint: Utilisez c().
+
+- Class: cmd_question
+  Output: Produisez un histogramme de x avec hist().
+  CorrectAnswer: hist(x)
+  AnswerTests: omnitest(correctExpr='hist(x)')
+  Hint: Utilisez hist(x).
+
+- Class: cmd_question
+  Output: Produisez une boîte à moustaches de x avec boxplot().
+  CorrectAnswer: boxplot(x)
+  AnswerTests: omnitest(correctExpr='boxplot(x)')
+  Hint: Utilisez boxplot(x).
+
+- Class: text
+  Output: Ajoutez toujours un titre, des axes compréhensibles et une courte interprétation.

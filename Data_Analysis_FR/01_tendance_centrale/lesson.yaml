@@ -1,0 +1,35 @@
+- Class: meta
+  Course: Analyse des données en français
+  Lesson: Tendance centrale
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: La moyenne, la médiane et le mode décrivent le centre d'une distribution.
+
+- Class: cmd_question
+  Output: Créez x contenant 2, 4, 4, 8 et 12.
+  CorrectAnswer: x <- c(2, 4, 4, 8, 12)
+  AnswerTests: omnitest(correctExpr='x <- c(2, 4, 4, 8, 12)')
+  Hint: Utilisez c().
+
+- Class: cmd_question
+  Output: Calculez la moyenne de x.
+  CorrectAnswer: mean(x)
+  AnswerTests: omnitest(correctExpr='mean(x)')
+  Hint: Utilisez mean(x).
+
+- Class: cmd_question
+  Output: Calculez la médiane de x.
+  CorrectAnswer: median(x)
+  AnswerTests: omnitest(correctExpr='median(x)')
+  Hint: Utilisez median(x).
+
+- Class: mult_question
+  Output: Quelle mesure est souvent moins sensible aux valeurs extrêmes ?
+  CorrectAnswer: La médiane
+  AnswerChoices: La médiane;La moyenne;Le maximum
+  AnswerTests: omnitest(correctVal='La médiane')
+  Hint: Elle dépend de l'ordre central des valeurs.

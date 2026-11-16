@@ -1,0 +1,35 @@
+- Class: meta
+  Course: Nettoyer et analyser les données en R
+  Lesson: Groupes et pipes
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Le pipe |> rend une suite d'étapes lisible. Chaque étape reçoit le résultat de la précédente.
+
+- Class: cmd_question
+  Output: Créez df avec zone égal à A, A, B, B et cas égal à 2, 5, 1, 4.
+  CorrectAnswer: df <- data.frame(zone = c("A", "A", "B", "B"), cas = c(2, 5, 1, 4))
+  AnswerTests: omnitest(correctExpr='df <- data.frame(zone = c("A", "A", "B", "B"), cas = c(2, 5, 1, 4))')
+  Hint: Utilisez data.frame().
+
+- Class: cmd_question
+  Output: Calculez le total de cas par zone avec un pipe.
+  CorrectAnswer: df |> dplyr::group_by(zone) |> dplyr::summarize(total = sum(cas))
+  AnswerTests: expr_uses_func('group_by')
+  Hint: Enchaînez group_by(zone) puis summarize(total = sum(cas)).
+
+- Class: cmd_question
+  Output: Triez df du plus grand nombre de cas au plus petit.
+  CorrectAnswer: dplyr::arrange(df, dplyr::desc(cas))
+  AnswerTests: expr_uses_func('arrange')
+  Hint: Utilisez arrange(df, desc(cas)).
+
+- Class: mult_question
+  Output: Quelle fonction crée des groupes avant un résumé ?
+  CorrectAnswer: group_by()
+  AnswerChoices: group_by();filter();select()
+  AnswerTests: omnitest(correctVal='group_by()')
+  Hint: Elle définit les groupes de calcul.

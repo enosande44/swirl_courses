@@ -1,0 +1,34 @@
+- Class: meta
+  Course: Analyse des données en français
+  Lesson: Dispersion
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: L'étendue, la variance, l'écart-type et les quantiles décrivent la dispersion.
+
+- Class: cmd_question
+  Output: Créez x contenant 2, 4, 4, 8 et 12.
+  CorrectAnswer: x <- c(2, 4, 4, 8, 12)
+  AnswerTests: omnitest(correctExpr='x <- c(2, 4, 4, 8, 12)')
+  Hint: Utilisez c().
+
+- Class: cmd_question
+  Output: Calculez l'écart-type de x.
+  CorrectAnswer: sd(x)
+  AnswerTests: omnitest(correctExpr='sd(x)')
+  Hint: Utilisez sd(x).
+
+- Class: cmd_question
+  Output: Affichez les quartiles de x avec quantile().
+  CorrectAnswer: quantile(x)
+  AnswerTests: omnitest(correctExpr='quantile(x)')
+  Hint: Utilisez quantile(x).
+
+- Class: cmd_question
+  Output: Affichez un résumé rapide de x.
+  CorrectAnswer: summary(x)
+  AnswerTests: omnitest(correctExpr='summary(x)')
+  Hint: Utilisez summary(x).

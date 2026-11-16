@@ -1,0 +1,25 @@
+- Class: meta
+  Course: Biostatistique mathématique en français
+  Lesson: Test t à un échantillon
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Le test t à un échantillon compare une moyenne observée à une valeur de référence.
+
+- Class: cmd_question
+  Output: Créez x contenant 8, 9, 10, 11 et 12.
+  CorrectAnswer: x <- c(8, 9, 10, 11, 12)
+  AnswerTests: omnitest(correctExpr='x <- c(8, 9, 10, 11, 12)')
+  Hint: Utilisez c().
+
+- Class: cmd_question
+  Output: Testez si la moyenne de x diffère de 10 avec t.test().
+  CorrectAnswer: t.test(x, mu = 10)
+  AnswerTests: expr_uses_func('t.test')
+  Hint: Utilisez t.test(x, mu = 10).
+
+- Class: text
+  Output: Examinez l'estimation, l'intervalle de confiance et la p-valeur. Une p-valeur ne mesure pas la taille de l'effet.

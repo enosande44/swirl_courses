@@ -1,0 +1,19 @@
+- Class: meta
+  Course: Biostatistique mathématique en français
+  Lesson: Puissance et taille d'échantillon
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: La puissance dépend de l'effet, de la variabilité, de la taille d'échantillon et du seuil choisi.
+
+- Class: cmd_question
+  Output: Calculez la taille nécessaire pour un test t à un échantillon avec power.t.test() et power égal à 0.8.
+  CorrectAnswer: power.t.test(power = 0.8)
+  AnswerTests: expr_uses_func('power.t.test')
+  Hint: Utilisez power.t.test(power = 0.8).
+
+- Class: text
+  Output: Une étude doit préciser l'effet minimal important et le niveau de puissance avant la collecte des données.

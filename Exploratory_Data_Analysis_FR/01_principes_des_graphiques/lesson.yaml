@@ -1,0 +1,27 @@
+- Class: meta
+  Course: Analyse exploratoire en français
+  Lesson: Principes des graphiques
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: L'analyse exploratoire commence par une question, une variable et une représentation adaptée.
+
+- Class: mult_question
+  Output: Quel graphique convient le mieux pour une variable numérique continue ?
+  CorrectAnswer: Un histogramme
+  AnswerChoices: Un histogramme;Un tableau de fréquences uniquement;Une carte de texte
+  AnswerTests: omnitest(correctVal='Un histogramme')
+  Hint: Il montre la distribution des valeurs.
+
+- Class: mult_question
+  Output: Quel graphique compare facilement une variable numérique entre groupes ?
+  CorrectAnswer: Une boîte à moustaches
+  AnswerChoices: Une boîte à moustaches;Un titre seul;Une chaîne de caractères
+  AnswerTests: omnitest(correctVal='Une boîte à moustaches')
+  Hint: Elle compare le centre et la dispersion.
+
+- Class: text
+  Output: Cherchez les tendances, les valeurs atypiques, les données manquantes et les changements de définition.

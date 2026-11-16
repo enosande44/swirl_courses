@@ -1,0 +1,28 @@
+- Class: meta
+  Course: Modèles de régression en français
+  Lesson: Moindres carrés
+  Author: Formation R
+  Type: Standard
+  Organization: Formation R
+  Version: 1.0.0
+
+- Class: text
+  Output: Les moindres carrés choisissent les coefficients qui minimisent la somme des carrés des résidus.
+
+- Class: cmd_question
+  Output: Créez df avec x égal à 1:5 et y égal à 2, 4, 5, 8, 10.
+  CorrectAnswer: df <- data.frame(x = 1:5, y = c(2, 4, 5, 8, 10))
+  AnswerTests: omnitest(correctExpr='df <- data.frame(x = 1:5, y = c(2, 4, 5, 8, 10))')
+  Hint: Utilisez data.frame().
+
+- Class: cmd_question
+  Output: Enregistrez le modèle dans objet_modele.
+  CorrectAnswer: objet_modele <- lm(y ~ x, data = df)
+  AnswerTests: expr_uses_func('lm')
+  Hint: Utilisez objet_modele <- lm(y ~ x, data = df).
+
+- Class: cmd_question
+  Output: Affichez le résumé du modèle.
+  CorrectAnswer: summary(objet_modele)
+  AnswerTests: omnitest(correctExpr='summary(objet_modele)')
+  Hint: Utilisez summary().
